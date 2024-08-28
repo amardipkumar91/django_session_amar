@@ -109,11 +109,12 @@ class ChangePasswordView(APIView):
         user = request.user
 
         if not user.check_password(old_password):
+            print ("hi")
             return Response({'detail': 'Invalid old password.'}, status=status.HTTP_400_BAD_REQUEST)
 
         user.set_password(new_password)
         user.save()
-        return Response({'detail': 'Password changed  successfully.......'}, status=status.HTTP_200_OK)
+        return Response({'detail': 'Password changed  successfully.'}, status=status.HTTP_200_OK)
 
 class DeleteAccountView(APIView):
     def delete(self, request):
