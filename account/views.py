@@ -99,7 +99,7 @@ class LoginView(APIView):
                 login(request, user)
                 return Response({'detail':'Logged in successfully.'}, status=status.HTTP_200_OK)
         else:
-            return Response({'detail': 'Email or Password is incorrect.'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'detail': 'Email or Password is  incorrect.'}, status=status.HTTP_400_BAD_REQUEST)
         
 
 class ChangePasswordView(APIView):
