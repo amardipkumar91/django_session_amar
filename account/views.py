@@ -113,7 +113,7 @@ class ChangePasswordView(APIView):
 
         user.set_password(new_password)
         user.save()
-        return Response({'detail': 'Password changed successfully.'}, status=status.HTTP_200_OK)
+        return Response({'detail': 'Password changed  successfully.'}, status=status.HTTP_200_OK)
 
 class DeleteAccountView(APIView):
     def delete(self, request):
